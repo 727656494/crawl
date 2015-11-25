@@ -16,27 +16,15 @@ public class DocumentTest {
 		Document page=ExtractService.getDocument("http://localhost:8080/page/u/order/orderList");
 		Elements elements = page.getAllElements();
 		System.out.println(elements);
-		for (Element element : elements)  
+		for (Element element : elements)
         {  
-            /*Elements links = element.getElementsByTag("link");
-            for (Element link : links)  
-            {  
-                //必要的筛选  
-                String linkHref = link.attr("href");  
-                String linkText = link.text();  
-                System.out.println(link);
-                System.out.println(linkHref);
-                System.out.println(linkText);
-                
-            }  */
-			
+			//Elements links = element.getElementsByTag("link");
 			Elements textCenters=element.getElementsByClass("text-center");
 			for(Element ele:textCenters){
 				String text = ele.text();
 				System.out.println(ele);
 				System.out.println(text);
 			}
-        }  
+        }
 	}
-
 }

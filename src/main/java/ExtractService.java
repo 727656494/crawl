@@ -27,14 +27,23 @@ import main.java.RuleException;
 public class ExtractService  
 {  
 	public static Document getDocument(String url){
-		Connection conn = Jsoup.connect(url);  
+		
+		/*Connection conn = Jsoup.connect(url);  
 		Document doc=null;
 		try {
 			doc = conn.timeout(100000).get();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		}  
+		}  */
+		
+		Document doc=null;
+		try {
+			doc = Jsoup.connect(url).timeout(5000).get();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return doc;
 	}
 	
