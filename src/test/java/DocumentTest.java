@@ -1,12 +1,11 @@
 package test.java;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import main.java.ExtractService;
-import main.java.LinkTypeData;
+
 
 public class DocumentTest {
 
@@ -15,9 +14,8 @@ public class DocumentTest {
         Element el = Jsoup.parse(html).getElementsByTag("a").get(0);
         el.getElementById("");*/
 		Document page=ExtractService.getDocument("http://localhost:8080/page/u/order/orderList");
-		Elements elements = new Elements();  
-		elements= page.getAllElements();
-		
+		Elements elements = page.getAllElements();
+		System.out.println(elements);
 		for (Element element : elements)  
         {  
             /*Elements links = element.getElementsByTag("link");   
@@ -34,7 +32,7 @@ public class DocumentTest {
 			
 			Elements textCenters=element.getElementsByClass("text-center");
 			for(Element ele:textCenters){
-				String text = ele.text();  
+				String text = ele.text();
 				System.out.println(ele);
 				System.out.println(text);
 			}
