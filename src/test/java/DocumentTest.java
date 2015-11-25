@@ -18,7 +18,7 @@ public class DocumentTest {
 		System.out.println(elements);
 		for (Element element : elements)  
         {  
-            /*Elements links = element.getElementsByTag("link");   
+            /*Elements links = element.getElementsByTag("link");
             for (Element link : links)  
             {  
                 //必要的筛选  
