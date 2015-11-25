@@ -1,4 +1,4 @@
-package crawl;
+package main.java;
 
 //异常类
 public class RuleException extends RuntimeException  {

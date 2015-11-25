@@ -1,4 +1,4 @@
-package crawl;
+package main.java;
 
 //规则类，简单说一下：这个规则类定义了我们查询过程中需要的所有信息，方便我们的扩展，以及代码的重用，我们不可能针对每个需要抓取的网站写一套代码。
 public class Rule {

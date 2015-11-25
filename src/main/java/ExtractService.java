@@ -1,4 +1,4 @@
-package crawl;
+package main.java;
 
  
 import java.io.IOException;  
@@ -13,12 +13,11 @@ import org.jsoup.Jsoup;
 import org.jsoup.helper.StringUtil;
 import org.jsoup.nodes.Document;  
 import org.jsoup.nodes.Element;  
-import org.jsoup.select.Elements;  
-  
-import crawl.LinkTypeData;  
-import crawl.Rule;  
-import crawl.RuleException;  
-/*import crawl.TextUtil;  */
+import org.jsoup.select.Elements;
+
+import main.java.LinkTypeData;
+import main.java.Rule;
+import main.java.RuleException;
   
 /** 
  *  

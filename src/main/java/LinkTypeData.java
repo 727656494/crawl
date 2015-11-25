@@ -1,4 +1,4 @@
-package crawl;
+package main.java;
 
 //需要的数据对象，目前只需要链接
 public class LinkTypeData {

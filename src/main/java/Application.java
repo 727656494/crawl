@@ -1,4 +1,4 @@
-package crawl;
+package main.java;
 
 import java.util.List;
 
@@ -19,21 +19,21 @@ public class Application {
 	        List<LinkTypeData> extracts2 = ExtractService.extract(rule2);  
 	        printf(extracts2);  */
 		
-		Rule rule = new Rule("http://jingyan.baidu.com/article/ca41422fc76c4a1eae99ed9f.html",  
+		Rule rule = new Rule("http://jingyan.baidu.com",  
 	            new String[] {}, new String[] {},  
 	            null, -1, Rule.GET);  
 	    List<LinkTypeData> extracts = ExtractService.extract(rule);  
 	    printf(extracts); 
-	    }  
+    }  
 
-	    public void getDatasByCssQuery()  
-	    {  
-	        Rule rule = new Rule("http://www.11315.com/search",  
-	                new String[] { "name" }, new String[] { "兴网" },  
-	                "div.g-mn div.con-model", Rule.SELECTION, Rule.GET);  
-	        List<LinkTypeData> extracts = ExtractService.extract(rule);  
-	        printf(extracts);  
-	    }  
+    public void getDatasByCssQuery()  
+    {  
+        Rule rule = new Rule("http://www.11315.com/search",  
+                new String[] { "name" }, new String[] { "兴网" },  
+                "div.g-mn div.con-model", Rule.SELECTION, Rule.GET);  
+        List<LinkTypeData> extracts = ExtractService.extract(rule);  
+        printf(extracts);  
+    }  
 	  
 	   
 		
